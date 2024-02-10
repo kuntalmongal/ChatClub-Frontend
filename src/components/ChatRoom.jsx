@@ -10,10 +10,11 @@ const ChatRoom = () => {
     const [msg, setMsg] = useState()
     const[socket,setSocket]=useState("")
     const [allMessages, setMessages] = useState([])
+    const baseUrl= "https://chatclub-group-chat-app.onrender.com"
 
 
    useEffect(()=>{
-     const socket=io("http://localhost:8000/" ,{ transports : ['websocket']} )
+     const socket=io( `${baseUrl}/` ,{ transports : ['websocket']} )
      setSocket(socket)
 
      socket.on("connect",()=>{
