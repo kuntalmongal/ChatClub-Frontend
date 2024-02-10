@@ -10,7 +10,7 @@ const ChatRoom = () => {
     const [msg, setMsg] = useState()
     const[socket,setSocket]=useState("")
     const [allMessages, setMessages] = useState([])
-    const baseUrl= "https://chatclub-group-chat-app.onrender.com"
+    const baseUrl= "https://chatclub-backend.onrender.com"
 
 
    useEffect(()=>{
